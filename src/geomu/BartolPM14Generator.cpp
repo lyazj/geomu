@@ -24,11 +24,14 @@ BartolPM14Generator::~BartolPM14Generator()
   delete[] sampler_;
 }
 
-double BartolPM14Generator::Generate(double *energy, double *cos_theta, bool *anti) const
+double BartolPM14Generator::Generate(double *energy, double *cos_theta, bool *anti)
 {
   bool anti_ = ZeroOrOne();
   double log_energy_, cos_theta_;
-  double weight = sampler_[anti_].Sample(&log_energy_, &cos_theta_);
+  double weight;
+  if(!sampler_[anti_].SmartSample(&log_energy_, &cos_theta_, &weight)) {
+    weight = sampler_[anti_].EvenlySample(&log_energy_, &cos_theta_);  // more than expected
+  }
   *energy = exp(log_energy_), *cos_theta = cos_theta_, *anti = anti_;
   return weight;
 }
@@ -76,7 +79,15 @@ void BartolPM14Generator::LoadData()
   for(size_t i = 0; i < 2; ++i) sampler_[i].SetGrid(log_energy, cos_theta, yields[i]);
 }
 
-bool BartolPM14Generator::ZeroOrOne() const
+bool BartolPM14Generator::ZeroOrOne()
 {
   return zero_one_distribution_(thread_random_engine);
+}
+
+void BartolPM14Generator::SetTargetNevent(size_t n, size_t n_grid)
+{
+  for(size_t i = 0; i < 2; ++i) {
+    sampler_[i].SetMinNevent(n);
+    sampler_[i].SetGridMinNevent(n_grid);
+  }
 }

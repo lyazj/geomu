@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 data = np.array([r.split() for r in os.popen('./sampler-test').read().strip().split('\n')], dtype='float')
 
-plt.hist(data[:,2], 50)
+plt.hist(data[:,2], 50, histtype='step')
 plt.tight_layout()
 plt.show()
 
