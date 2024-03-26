@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-reader = csv.reader(open('../data/Bartol_pm14.csv'), delimiter='\t')
+reader = csv.reader(open('../data/Bartol_pm14.tsv'), delimiter='\t')
 
 # Fetch cos_theta values.
 for line in reader:
