@@ -39,3 +39,6 @@ exec(open(filename).read())
 for dirpath, _, _ in os.walk(dirname_org):
     if os.path.basename(dirpath) == 'include':
         flags.append('-I' + dirpath)
+
+# Add project macro definitions.
+flags.append('-DPROJECT_BASEDIR="' + dirname_org + '"')

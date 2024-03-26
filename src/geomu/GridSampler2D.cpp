@@ -1,4 +1,5 @@
 #include "geomu/GridSampler2D.h"
+#include "geomu/random.h"
 #include <utility>
 #include <stdexcept>
 #include <algorithm>
@@ -13,11 +14,6 @@ void GridSampler2D::SetGrid(const vector<double> &grid_x, const vector<double> &
   grid_y_ = grid_y;
   grid_ = grid;
   ProcessGrid();
-}
-
-void GridSampler2D::Seed(double seed)
-{
-  random_engine_.seed(seed);
 }
 
 void GridSampler2D::ProcessGrid()
@@ -54,7 +50,7 @@ void GridSampler2D::ProcessGrid()
 
 double GridSampler2D::Random() const
 {
-  return uniform_distribution_(random_engine_);
+  return uniform_distribution_(thread_random_engine);
 }
 
 double GridSampler2D::Sample(double *x, double *y) const

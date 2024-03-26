@@ -15,16 +15,12 @@ public:
   // Returns weight of current sample.
   double Sample(double *x, double *y) const;
 
-  // Set random number seed.
-  void Seed(double seed);
-
 private:
   std::vector<double> grid_x_, grid_y_;
   std::vector<std::vector<double>> grid_;  // yield densities at grid points
   std::vector<std::vector<double>> center_;  // yield densities at lattice centers
   std::vector<double> frac_cumsum_;  // cumulative sum of yield fractions, flattened
   double total_yield_;
-  mutable std::default_random_engine random_engine_;
   mutable std::uniform_real_distribution<double> uniform_distribution_;
 
   // Used by SetGrid() for pre-procession works.
@@ -32,4 +28,5 @@ private:
 
   // Generate a uniform distributed random number in [0.0, 1.0).
   double Random() const;
+
 };

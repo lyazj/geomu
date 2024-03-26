@@ -22,22 +22,22 @@ for line in reader:
     density_m14.append(line[2::2])
 energy, density_p14, density_m14 = map(lambda x: np.array(x, dtype='float'), (energy, density_p14, density_m14))
 
-#plt.contourf(*np.meshgrid(cos_theta, energy), density_p14, locator=ticker.LogLocator())
-#plt.xlabel(r'$\cos\theta$')
-#plt.ylabel(r'$E_\nu$ [GeV]')
-#plt.yscale('log')
-#plt.colorbar()
-#plt.tight_layout()
-#plt.savefig('plot_Bartol_p14.pdf')
-#
-#plt.clf()
-#plt.contourf(*np.meshgrid(cos_theta, energy), density_m14, locator=ticker.LogLocator())
-#plt.xlabel(r'$\cos\theta$')
-#plt.ylabel(r'$E_\nu$ [GeV]')
-#plt.yscale('log')
-#plt.colorbar()
-#plt.tight_layout()
-#plt.savefig('plot_Bartol_m14.pdf')
+plt.contourf(*np.meshgrid(cos_theta, energy), density_p14, locator=ticker.LogLocator())
+plt.xlabel(r'$\cos\theta$')
+plt.ylabel(r'$E_\nu$ [GeV]')
+plt.yscale('log')
+plt.colorbar()
+plt.tight_layout()
+plt.savefig('plot_Bartol_p14.pdf')
+
+plt.clf()
+plt.contourf(*np.meshgrid(cos_theta, energy), density_m14, locator=ticker.LogLocator())
+plt.xlabel(r'$\cos\theta$')
+plt.ylabel(r'$E_\nu$ [GeV]')
+plt.yscale('log')
+plt.colorbar()
+plt.tight_layout()
+plt.savefig('plot_Bartol_m14.pdf')
 
 def format_1d(x):
     return [ '%.2e' % x for x in x ]
