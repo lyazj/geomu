@@ -54,10 +54,6 @@ plt.yscale('log')
 plt.legend()
 plt.tight_layout()
 plt.savefig('plot_Bartol_pm14_energy.pdf')
-with open('../data/Bartol_pm14_energy.tsv', 'w') as outfile:
-    print(*energy, sep='\t', file=outfile)
-    print(*format_1d(density_p14_energy), sep='\t', file=outfile)
-    print(*format_1d(density_m14_energy), sep='\t', file=outfile)
 
 plt.clf()
 density_p14_cos_theta = density_p14.mean(0)
@@ -70,7 +66,3 @@ plt.yscale('log')
 plt.legend()
 plt.tight_layout()
 plt.savefig('plot_Bartol_pm14_cos_theta.pdf')
-with open('../data/Bartol_pm14_cos_theta.tsv', 'w') as outfile:
-    print(*cos_theta, sep='\t', file=outfile)
-    print(*format_1d(density_p14_cos_theta), sep='\t', file=outfile)
-    print(*format_1d(density_m14_cos_theta), sep='\t', file=outfile)
