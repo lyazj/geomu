@@ -22,4 +22,5 @@ private:
 
   // Randomly generate 0 or 1.
   bool ZeroOrOne() const;
+
 };

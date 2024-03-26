@@ -4,8 +4,12 @@
 #include <stdexcept>
 #include <algorithm>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
+
+//#define DIAG_LVL  DIAG_DBG
+#include "geomu/diagnostic.h"
 
 void GridSampler2D::SetGrid(const vector<double> &grid_x, const vector<double> &grid_y,
     const vector<vector<double>> &grid)
@@ -46,6 +50,16 @@ void GridSampler2D::ProcessGrid()
   // Normalize frac_cumsum_.
   if(!isfinite(cumsum) || cumsum == 0.0) throw logic_error("invalid total yield detected");
   for(double &value : frac_cumsum_) value /= cumsum;
+
+  difo << "sampling matrix:" << '\n';
+  difo << scientific << setprecision(15);
+  for(size_t i = 0; i < nrow - 1; ++i) {
+    for(size_t j = 0; j < ncol - 1; ++j) {
+       difo << '\t' << frac_cumsum_[i * (ncol - 1) + j];
+    }
+    difo << '\n';
+  }
+  difo << defaultfloat << dend;
 }
 
 double GridSampler2D::Random() const

@@ -42,3 +42,4 @@ for dirpath, _, _ in os.walk(dirname_org):
 
 # Add project macro definitions.
 flags.append('-DPROJECT_BASEDIR="' + dirname_org + '"')
+flags.append('-DDIAG_SERIALIZE=1')
