@@ -21,7 +21,9 @@ Install GENIE
 
     $ export GENIE="${PWD}"
     $ export ROOTSYS=/usr/local
-    $ ./configure --enable-pythia8 --enable-geant4 --disable-lhapdf5 --enable-lhapdf6 --with-pythia6-lib=/usr/local/lib
+    $ ./configure --enable-pythia8 --enable-geant4 --disable-lhapdf5 --enable-lhapdf6 --with-pythia6-lib=/usr/local/lib --enable-atmo
+
+**Added on Apr 7**: Add option --enable-atmo to enable gevgen_atmo for atmospheric neutrino event generation.
 
 An example environment configuration for GENIE:
 
