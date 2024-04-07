@@ -16,14 +16,15 @@ TUNE="G21_11a_00_000"
 LENGTH_UNIT="L"
 DENSITY_UNIT="kg_m3"
 NEVENT="100000"
-ENERGY_RANGE="50,5000"  # GeV
+ENERGY_RANGE="1,999"  # GeV
 OUTPUT_PREFIX="${ENERGY_RANGE}"
 SEED="$(date +%Y%m%d%H%M%S)"
 RUN_NUMBER="${SEED}"
+MESSAGE_CONFFILE="Messenger_laconic.xml"
 
 source ../env.sh
 stdbuf -oL gevgen_atmo -f "${FLUX}" -g "${GEOMETRY}" \
     -L "${LENGTH_UNIT}" -D "${DENSITY_UNIT}" -n "${NEVENT}" -E "${ENERGY_RANGE}" \
     -o "${OUTPUT_PREFIX}" -r "${RUN_NUMBER}" --seed "${SEED}" \
-    --cross-sections "${XS_FILE}" --tune "${TUNE}" \
+    --cross-sections "${XS_FILE}" --tune "${TUNE}" --message-thresholds "${MESSAGE_CONFFILE}" \
     2>&1 | tee run.log
