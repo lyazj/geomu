@@ -31,6 +31,11 @@ An example environment configuration for GENIE:
     export ROOTSYS=/usr/local
     export LHAPATH=/usr/local/share/LHAPDF
     export PATH=${PATH}:${GENIE}/bin
+    if [ -z "${CPLUS_INCLUDE_PATH}" ]; then
+        export CPLUS_INCLUDE_PATH=${GENIE}/src
+    else
+        export CPLUS_INCLUDE_PATH=${LD_LIBRARY_PATH}:${GENIE}/src
+    fi
     if [ -z "${LD_LIBRARY_PATH}" ]; then
         export LD_LIBRARY_PATH=${GENIE}/lib
     else
