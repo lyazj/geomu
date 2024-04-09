@@ -23,11 +23,11 @@ void DiagnosticLogger::on_output()
   }
 }
 
-void DiagnosticLogger::on_terminate()
+void DiagnosticLogger::on_terminate(bool newline)
 {
   if(state_[level_] == 0) on_output();  // Avoid empty line.
   if(stderr_to_tty) os_ << ECMA48_SGR::FG_DFT;
-  os_ << std::endl;
+  if(newline) os_ << std::endl;
   state_[level_] = 0;
   if(level_ == DIAG_FTL) exit(EXIT_FAILURE);
 #ifdef DIAG_SERIALIZE

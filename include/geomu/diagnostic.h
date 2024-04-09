@@ -40,7 +40,7 @@
 #error "DIAG_LVL out of range"
 #endif  /* DIAG_LVL */
 
-struct LoggingTerminator { };
+struct LoggingTerminator { bool newline; };
 
 /*
  * Here we implement a two state automata.
@@ -80,7 +80,7 @@ protected:
 
   // Automata implementation.
   void on_output();
-  void on_terminate();
+  void on_terminate(bool newline);
 
 };
 
@@ -112,9 +112,9 @@ public:
   /*
    * This wraps std::endl to make necessary state transitions.
    */
-  UniqueDiagnosticLogger &operator<<(LoggingTerminator) {
+  UniqueDiagnosticLogger &operator<<(LoggingTerminator terminator) {
     if(enabled()) {
-      on_terminate();
+      on_terminate(terminator.newline);
     }
     return *this;
   }
@@ -128,4 +128,5 @@ public:
 #define dwrn  (UniqueDiagnosticLogger(DIAG_WRN, ECMA48_SGR::FG_BBRN, std::cerr, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #define derr  (UniqueDiagnosticLogger(DIAG_ERR, ECMA48_SGR::FG_BRED, std::cerr, __FILE__, __LINE__, __PRETTY_FUNCTION__))
 #define dftl  (UniqueDiagnosticLogger(DIAG_FTL, ECMA48_SGR::FG_BMGT, std::cerr, __FILE__, __LINE__, __PRETTY_FUNCTION__))
-#define dend  (LoggingTerminator())  // Additional () also guarantees disambiguating as an expression.
+#define dend  (LoggingTerminator{true })  // Additional () also guarantees disambiguating as an expression.
+#define dtrm  (LoggingTerminator{false})  // Additional () also guarantees disambiguating as an expression.
