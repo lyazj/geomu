@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
-project(hss VERSION 0.0.1)
+project(geomu VERSION 0.0.1)
 
 # 设置项目包含目录、库目录和可执行文件目录
 include_directories(${PROJECT_SOURCE_DIR}/include)
