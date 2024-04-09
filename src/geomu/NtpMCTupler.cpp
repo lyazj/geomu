@@ -1,8 +1,11 @@
+#include "geomu/GenieAdapter.h"
 #include "geomu/NtpMCTupler.h"
 #include <TChain.h>
 #include <TFile.h>
 #include <Framework/Ntuple/NtpMCTreeHeader.h>
 #include <Framework/Ntuple/NtpMCEventRecord.h>
+
+[[maybe_unused]] static GenieAdapter genieAdapter;
 
 using namespace genie;
 

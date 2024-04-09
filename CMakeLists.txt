@@ -28,6 +28,8 @@ execute_process(COMMAND genie-config --topsrcdir OUTPUT_VARIABLE GENIE_SOURCE_DI
 include_directories(${GENIE_SOURCE_DIR})
 execute_process(COMMAND genie-config --libdir OUTPUT_VARIABLE GENIE_LIBRARY_DIR OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
 link_directories(${GENIE_LIBRARY_DIR})
+execute_process(COMMAND readlink -f "${GENIE_SOURCE_DIR}/.." OUTPUT_VARIABLE GENIE OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+add_compile_definitions(GENIE="${GENIE}")
 
 # 优化、调试和通用编译选项
 option(ENABLE_SANITIZER "compile and link with sanitizing flags" OFF)
@@ -68,10 +70,10 @@ target_link_libraries(geomu PUBLIC ${GENIE_LINK_LIBRARIES} EGPythia6 ${ROOT_LIBR
 # 以下为可执行文件构建
 
 add_executable(geomu-run src/geomu-run.cpp)
-target_link_libraries(geomu-run geomu)
+target_link_libraries(geomu-run PRIVATE geomu)
 
 add_executable(ntuple-ntpmc src/ntuple-ntpmc.cpp)
-target_link_libraries(ntuple-ntpmc geomu)
+target_link_libraries(ntuple-ntpmc PRIVATE geomu)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/test)
 file(GLOB TEST_SOURCES test/*.cpp)

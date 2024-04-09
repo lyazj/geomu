@@ -39,8 +39,9 @@ exec(open(filename).read())
 for dirpath, _, _ in os.walk(dirname_org):
     if os.path.basename(dirpath) == 'include':
         flags.append('-I' + dirpath)
-flags.append('-I' + '../genie_generator/src')
+flags.append('-I' + os.path.abspath(dirname_org + '/../genie_generator/src'))
 
 # Add project macro definitions.
 flags.append('-DPROJECT_BASEDIR="' + dirname_org + '"')
+flags.append('-DGENIE="' + os.path.abspath(dirname_org + '/../genie_generator') + '"')
 flags.append('-DDIAG_SERIALIZE=1')
