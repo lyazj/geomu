@@ -110,6 +110,12 @@ void MyNtpMCTupler::TranscriptOneEvent()
     abs_pdg = abs(lepton->Pdg());
     if(abs_pdg != kPdgElectron && abs_pdg != kPdgMuon) continue;
 
+    // Apply filters on this event.
+    if(lepton->Pz() < 0.0) {
+      ddbg << "Skipping event with negative charged lepton pz (" << lepton->Pz() << "):\n" << *event << dtrm;
+      return;
+    }
+
     // Transcript this event.
     weight_ = event->Weight();
     neutrino_pid_ = neutrino->Pdg();
