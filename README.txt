@@ -25,6 +25,10 @@ Install GENIE
 
 **Added on Apr 7**: Add option --enable-atmo to enable gevgen_atmo for atmospheric neutrino event generation.
 
+**Added on Apr 12**: The GENIE generator is under a minor adaptation for our use. Please install it via:
+
+    https://github.com/lyazj/genie_generator/tree/geomu
+
 An example environment configuration for GENIE:
 
     export GENIE=/home/lyazj/software/genie_generator
