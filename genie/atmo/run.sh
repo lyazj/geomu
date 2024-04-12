@@ -17,6 +17,7 @@ LENGTH_UNIT="m"
 DENSITY_UNIT="kg_m3"
 NEVENT="100000"
 ENERGY_RANGE="1,999"  # GeV
+COS_THETA_RANGE="0,1"
 OUTPUT_PREFIX="${ENERGY_RANGE}"
 SEED="$(date +%Y%m%d%H%M%S)"
 RUN_NUMBER="${SEED}"
@@ -29,8 +30,8 @@ while [ -e "${INFILE}" ]; do
 done
 
 source ../env.sh
-stdbuf -oL gevgen_atmo -f "${FLUX}" -g "${GEOMETRY}" \
-    -L "${LENGTH_UNIT}" -D "${DENSITY_UNIT}" -n "${NEVENT}" -E "${ENERGY_RANGE}" \
+stdbuf -oL gevgen_atmo -w -f "${FLUX}" -g "${GEOMETRY}" \
+    -L "${LENGTH_UNIT}" -D "${DENSITY_UNIT}" -n "${NEVENT}" -E "${ENERGY_RANGE}" -C "${COS_THETA_RANGE}" \
     -o "${OUTPUT_PREFIX}" -r "${RUN_NUMBER}" --seed "${SEED}" \
     --cross-sections "${XS_FILE}" --tune "${TUNE}" --message-thresholds "${MESSAGE_CONFFILE}" \
     2>&1 | tee run-"${SEED}".log
