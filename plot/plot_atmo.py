@@ -11,7 +11,6 @@ events = uproot.open('../data/O16_1,999.ntuple.root:tree').arrays()
 neutrino_logE_min = np.log(ak.min(events['neutrino_p4','fE']))
 neutrino_logE_max = np.log(ak.max(events['neutrino_p4','fE']))
 neutrino_E_bin = np.logspace(neutrino_logE_min, neutrino_logE_max, 51, base=np.e)
-print(neutrino_E_bin)
 
 lepton_logE_min = np.log(ak.min(events['lepton_p4','fE']))
 lepton_logE_max = np.log(ak.max(events['lepton_p4','fE']))
