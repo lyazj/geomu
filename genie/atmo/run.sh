@@ -31,12 +31,12 @@ done
 
 source ../env.sh
 
-#echo gevgen_atmo -w -f "${FLUX}" -g "${GEOMETRY}" \
+#echo gevgen_atmo -f "${FLUX}" -g "${GEOMETRY}" \
 #    -L "${LENGTH_UNIT}" -D "${DENSITY_UNIT}" -n "${NEVENT}" -E "${ENERGY_RANGE}" -C "${COS_THETA_RANGE}" \
 #    -o "${OUTPUT_PREFIX}" -r "${RUN_NUMBER}" --seed "${SEED}" \
 #    --cross-sections "${XS_FILE}" --tune "${TUNE}" --message-thresholds "${MESSAGE_CONFFILE}"
 #exit  # DEBUG
-stdbuf -oL gevgen_atmo -w -f "${FLUX}" -g "${GEOMETRY}" \
+stdbuf -oL gevgen_atmo -f "${FLUX}" -g "${GEOMETRY}" \
     -L "${LENGTH_UNIT}" -D "${DENSITY_UNIT}" -n "${NEVENT}" -E "${ENERGY_RANGE}" -C "${COS_THETA_RANGE}" \
     -o "${OUTPUT_PREFIX}" -r "${RUN_NUMBER}" --seed "${SEED}" \
     --cross-sections "${XS_FILE}" --tune "${TUNE}" --message-thresholds "${MESSAGE_CONFFILE}" \
