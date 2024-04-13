@@ -16,7 +16,7 @@ lepton_logE_min = np.log(ak.min(events['lepton_p4','fE']))
 lepton_logE_max = np.log(ak.max(events['lepton_p4','fE']))
 lepton_E_bin = np.logspace(lepton_logE_min, lepton_logE_max, 41, base=np.e)
 
-cos_theta_min = 0
+cos_theta_min = -1
 cos_theta_max = 1
 cos_theta_bin = np.linspace(cos_theta_min, cos_theta_max, 41)
 
