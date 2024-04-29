@@ -1,0 +1,14 @@
+https://en.wikipedia.org/wiki/Abundances_of_the_elements_(data_page)
+
+Earth bulk continental crust and upper continental crust
+
+C1 — Crust: CRC Handbook
+C2 — Crust: Kaye and Laby
+C3 — Crust: Greenwood
+C4 — Crust: Ahrens (Taylor)
+C5 — Crust: Ahrens (Wänke)
+C6 — Crust: Ahrens (Weaver)
+U1 — Upper crust: Ahrens (Taylor)
+U2 — Upper crust: Ahrens (Shaw)
+
+Mass fraction, in kg/kg

@@ -31,6 +31,24 @@ include_directories(SYSTEM ${ROOT_INCLUDE_DIRS})
 link_directories(${ROOT_LIBRARY_DIR})
 set(ROOT_LIBRARIES ${ROOT_LIBRARIES})
 
+#----------------------------------------------------------------------------
+# Find Geant4 package, activating all available UI and Vis drivers by default
+# You can set WITH_GEANT4_UIVIS to OFF via the command line or ccmake/cmake-gui
+# to build a batch mode only executable
+#
+option(WITH_GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
+if(WITH_GEANT4_UIVIS)
+  find_package(Geant4 REQUIRED ui_all vis_all)
+else()
+  find_package(Geant4 REQUIRED)
+endif()
+
+#----------------------------------------------------------------------------
+# Setup Geant4 include directories and compile definitions
+# Setup include directory for this project
+#
+include(${Geant4_USE_FILE})
+
 # 优化、调试和通用编译选项
 option(ENABLE_SANITIZER "compile and link with sanitizing flags" OFF)
 option(ENABLE_GPROF "compile and link with gprof flags" OFF)
@@ -65,7 +83,7 @@ add_compile_definitions(DIAG_SERIALIZE)
 
 file(GLOB GEOMU_SOURCES src/geomu/*.cpp)
 add_library(geomu ${GEOMU_SOURCES})
-target_link_libraries(geomu PUBLIC ${GENIE_LINK_LIBRARIES} EGPythia6 ${ROOT_LIBRARIES} log4cpp xml2)
+target_link_libraries(geomu PUBLIC ${GENIE_LINK_LIBRARIES} EGPythia6 ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} log4cpp xml2)
 
 # 以下为可执行文件构建
 

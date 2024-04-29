@@ -1,2 +1,2 @@
 set nowrap
-set ts=10
+set ts=12

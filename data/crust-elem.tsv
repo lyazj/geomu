@@ -1,0 +1,95 @@
+Element	C1	C2	C3	C4	C5	C6	U1	U2
+01 H hydrogen	1.40e-3		1.520e-3					
+02 He helium	8e-9							
+03 Li lithium	2.0e-5	2.0e-5	1.8e-5	1.3e-5	1.37e-5		2.0e-5	2.2e-5
+04 Be beryllium	2.8e-6	2.0e-6	2e-6	1.500e-6			3.000e-6	
+05 B boron	1.0e-5	7.0e-6	9e-6	1.0000e-5			1.5000e-5	
+06 C carbon	2.00e-4		1.80e-4		3.76e-3			
+07 N nitrogen	1.9e-5	2.0e-5	1.9e-5					
+08 O oxygen	4.61e-1	3.7e-1	4.55000e-1					
+09 F fluorine	5.85e-4	4.6e-4	5.44e-4		5.25e-4			
+10 Ne neon	5e-9							
+11 Na sodium	2.36e-2	2.3e-2	2.2700e-2	2.3000e-2	2.4400e-2	3.1000e-2	2.89e-2	2.57e-2
+12 Mg magnesium	2.33e-2	2.8e-2	2.7640e-2	3.20e-2	2.37e-2	1.69e-2	1.33e-2	1.35e-2
+13 Al aluminium	8.23e-2	8.0e-2	8.3000e-2	8.4100e-2	8.3050e-2	8.5200e-2	8.0400e-2	7.7400e-2
+14 Si silicon	2.82e-1	2.7e-1	2.72000e-1	2.677e-1	2.81e-1	2.95e-1	3.08e-1	3.04e-1
+15 P phosphorus	1.05e-3	1.0e-3	1.120e-3		7.63e-4	8.30e-4		
+16 S sulfur	3.50e-4	3.0e-4	3.40e-4		8.81e-4			
+17 Cl chlorine	1.45e-4	1.9e-4	1.26e-4		1.900e-3			
+18 Ar argon	3.5e-6							
+19 K potassium	2.09e-2	1.7e-2	1.8400e-2	9.100e-3	1.7600e-2	1.7000e-2	2.8000e-2	2.5700e-2
+20 Ca calcium	4.15e-2	5.1e-2	4.6600e-2	5.2900e-2	4.9200e-2	3.4000e-2	3.0000e-2	2.9500e-2
+21 Sc scandium	2.2e-5	2.2e-5	2.5e-5	3.0e-5	2.14e-5		1.1e-5	7e-6
+22 Ti titanium	5.65e-3	8.6e-3	6.320e-3	5.400e-3	5.250e-3	3.600e-3	3.000e-3	3.120e-3
+23 V vanadium	1.20e-4	1.7e-4	1.36e-4	2.30e-4	1.34e-4		6.0e-5	5.3e-5
+24 Cr chromium	1.02e-4	9.6e-5	1.22e-4	1.85e-4	1.46e-4	5.6e-5	3.5e-5	3.5e-5
+25 Mn manganese	9.50e-4	1.0e-3	1.060e-3	1.400e-3	8.47e-4	1.000e-3	6.00e-4	5.27e-4
+26 Fe iron	5.63e-2	5.8e-2	6.2000e-2	7.07e-2	4.92e-2	3.8e-2	3.50e-2	3.09e-2
+27 Co cobalt	2.5e-5	2.8e-5	2.9e-5	2.9e-5	2.54e-5		1.0e-5	1.2e-5
+28 Ni nickel	8.4e-5	7.2e-5	9.9e-5	1.05e-4	6.95e-5	3.5e-5	2e-5	1.9e-5
+29 Cu copper	6.0e-5	5.8e-5	6.8e-5	7.5e-5	4.7e-5		2.5e-5	1.4e-5
+30 Zn zinc	7.0e-5	8.2e-5	7.6e-5	8.0e-5	7.6e-5		7.1e-5	5.2e-5
+31 Ga gallium	1.9e-5	1.7e-5	1.9e-5	1.8e-5	1.86e-5		1.7e-5	1.4e-5
+32 Ge germanium	1.5e-6	1.3e-6	1.5e-6	1.6e-6	1.32e-6		1.6e-6	
+33 As arsenic	1.8e-6	2.0e-6	1.8e-6	1.0e-6	2.03e-6		1.5e-6	
+34 Se selenium	5e-8	5e-8	5e-8	5e-8	1.53e-7		5e-8	
+35 Br bromine	2.4e-6	4.0e-6	2.5e-6		6.95e-6			
+36 Kr krypton	1e-10							
+37 Rb rubidium	9.0e-5	7.0e-5	7.8e-5	3.2e-5	7.90e-5	6.1e-5	1.12e-4	1.10e-4
+38 Sr strontium	3.70e-4	4.5e-4	3.84e-4	2.60e-4	2.93e-4	5.03e-4	3.50e-4	3.16e-4
+39 Y yttrium	3.3e-5	3.5e-7	3.1e-5	2.0e-5		1.4e-5	2.2e-5	2.1e-5
+40 Zr zirconium	1.65e-4	1.4e-4	1.62e-4	1.00e-4		2.10e-4	1.90e-4	2.40e-4
+41 Nb niobium	2.0e-5	2.0e-5	2.0e-5	1.1000e-5		1.3000e-5	2.5000e-5	2.6000e-5
+42 Mo molybdenum	1.2e-6	1.2e-6	1.2e-6	1.000e-6			1.500e-6	
+43 Tc technetium								
+44 Ru ruthenium	1e-9		1e-10					
+45 Rh rhodium	1e-9		1e-10					
+46 Pd palladium	1.5e-8	3e-9	1.5e-8	1.0e-9			5e-10	
+47 Ag silver	7.5e-8	8e-8	8e-8	8.0e-8	6.95e-8		5.0e-8	
+48 Cd cadmium	1.5e-7	1.8e-7	1.6e-7	9.8e-8	1.00e-7		9.8e-8	
+49 In indium	2.5e-7	2e-7	2.4e-7	5.0e-8	6.95e-8		5.0e-8	
+50 Sn tin	2.3e-6	1.5e-6	2.1e-6	2.500e-6			5.500e-6	
+51 Sb antimony	2e-7	2e-7	2e-7	2.00e-7	2.03e-7		2.00e-7	
+52 Te tellurium	1e-9		1e-9		2.03e-9			
+53 I iodine	4.5e-7	5e-7	4.6e-7		1.540e-6			
+54 Xe xenon	3e-11							
+55 Cs caesium	3e-6	1.6e-6	2.6e-6	1.000e-6	1.310e-6		3.700e-6	
+56 Ba barium	4.25e-4	3.8e-4	3.90e-4	2.50000e-4	5.42000e-4	7.07000e-4	5.50000e-4	1.070000e-3
+57 La lanthanum	3.9e-5	5.0e-5	3.5e-5	1.6000e-5	2.9000e-5	2.8000e-5	3.0000e-5	3.200e-6
+58 Ce cerium	6.65e-5	8.3e-5	6.6e-5	3.3000e-5	5.4200e-5	5.7000e-5	6.4000e-5	6.5000e-5
+59 Pr praseodymium	9.2e-6	1.3e-5	9.1e-6	3.900e-6			7.100e-6	
+60 Nd neodymium	4.15e-5	4.4e-5	4.0e-5	1.6000e-5	2.5400e-5	2.3000e-5	2.6000e-5	2.6000e-5
+61 Pm promethium								
+62 Sm samarium	7.05e-6	7.7e-6	7.0e-6	3.500e-6	5.590e-6	4.100e-6	4.500e-6	4.500e-6
+63 Eu europium	2.0e-6	2.2e-6	2.1e-6	1.100e-6	1.407e-6	1.090e-6	8.80e-7	9.40e-7
+64 Gd gadolinium	6.2e-6	6.3e-6	6.1e-6	3.300e-6	8.140e-6		3.800e-6	2.800e-6
+65 Tb terbium	1.2e-6	1.0e-6	1.2e-6	6.00e-7	1.020e-6	5.30e-7	6.40e-7	4.80e-7
+66 Dy dysprosium	5.2e-6	8.5e-6		3.700e-6	6.102e-6		3.500e-6	
+67 Ho holmium	1.3e-6	1.6e-6	1.3e-6	7.80e-7	1.860e-6		8.00e-7	6.20e-7
+68 Er erbium	3.5e-6	3.6e-6	3.5e-6	2.200e-6	3.390e-6		2.300e-6	
+69 Tm thulium	5.2e-7	5.2e-7	5e-7	3.20e-7		2.40e-7	3.30e-7	
+70 Yb ytterbium	3.2e-6	3.4e-6	3.1e-6	2.200e-6	3.390e-6	1.530e-6	2.200e-6	1.500e-6
+71 Lu lutetium	8e-7	8e-7		3.00e-7	5.76e-7	2.30e-7	3.20e-7	2.30e-7
+72 Hf hafnium	3.0e-6	4e-6	2.8e-6	3.000e-6	3.460e-6	4.700e-6	5.800e-6	5.800e-6
+73 Ta tantalum	2.0e-6	2.4e-6	1.7e-6	1.000e-6	2.203e-6		2.200e-6	
+74 W tungsten	1.25e-6	1.0e-6	1.2e-6	1.000e-6	1.310e-6		2.000e-6	
+75 Re rhenium	7e-10	4e-10	7e-10	5e-10	1.02e-9		5e-10	
+76 Os osmium	1.5e-9	2e-10	5e-9		1.02e-9			
+77 Ir iridium	1e-9	2e-10	1e-9	1e-10	1.02e-9		2e-11	
+78 Pt platinum	5e-9		1e-8					
+79 Au gold	4e-9	2e-9	4e-9	3.0e-9	4.07e-9		1.8e-9	
+80 Hg mercury	8.5e-8	2e-8	8e-8					
+81 Tl thallium	8.5e-7	4.7e-7	7e-7	3.60e-7			7.50e-7	5.20e-7
+82 Pb lead	1.4e-5	1.0e-5	1.3e-5	8.000e-6		1.5000e-5	2.0000e-5	1.7000e-5
+83 Bi bismuth	8.5e-9	4e-9	8e-9	6.0e-8			1.27e-7	
+84 Po polonium	2e-16							
+85 At astatine								
+86 Rn radon	4e-19							
+87 Fr francium								
+88 Ra radium	9e-13							
+89 Ac actinium	5.5e-16							
+90 Th thorium	9.6e-6	5.8e-6	8.1e-6	3.500e-6		5.700e-6	1.0700e-5	1.0000e-5
+91 Pa protactinium	1.4e-12							
+92 U uranium	2.7e-6	1.6e-6	2.3e-6	9.10e-7	1.200e-6	1.300e-6	2.800e-6	2.500e-6
+93 Np neptunium								
+94 Pu plutonium								
