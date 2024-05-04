@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <mutex>
 
 #ifndef CRUST_MATERIAL_DATAPATH
 #define CRUST_MATERIAL_DATAPATH  PROJECT_BASEDIR "/data/crust-elem.tsv"
@@ -13,7 +14,7 @@
 
 using namespace std;
 
-CrustMaterialFactory *CrustMaterialFactory::instance_;
+atomic<CrustMaterialFactory *> CrustMaterialFactory::instance_;
 
 CrustMaterialFactory::CrustMaterialFactory()
 {
@@ -88,6 +89,12 @@ void CrustMaterialFactory::LoadData()
 
 CrustMaterialFactory *CrustMaterialFactory::Instance()
 {
-  // [XXX] The instance is never deleted.
-  return instance_ ? : (instance_ = new CrustMaterialFactory);
+  CrustMaterialFactory *instance = instance_;
+  if(instance) return instance;
+
+  static mutex l;
+  lock_guard<mutex> lg(l);
+  instance = instance_;
+  if(!instance) instance_ = instance = new CrustMaterialFactory;
+  return instance;
 }

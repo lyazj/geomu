@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <atomic>
 
 class G4Material;
 
@@ -20,7 +21,7 @@ private:
   std::vector<std::string> elem_names_;  // [element_id]
   std::vector<std::vector<double>> elem_abundances_;  // [name_id][element_id]
 
-  static CrustMaterialFactory *instance_;
+  static std::atomic<CrustMaterialFactory *> instance_;
 
   void LoadData();
 
